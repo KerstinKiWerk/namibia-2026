@@ -842,7 +842,28 @@
 
 </div>
 <h2>Kommentare</h2>
-      <p>Hier könnt ihr während der Reise eure Gedanken dalassen (Formular folgt).</p>
+<p>Hier könnt ihr während der Reise eure Gedanken dalassen:</p>
+
+<form name="kommentare" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+  <input type="hidden" name="form-name" value="kommentare" />
+  <p style="display: none;">
+    <label>Nicht ausfüllen: <input name="bot-field" /></label>
+  </p>
+
+  <p>
+    <label for="name">Name:<br>
+      <input type="text" id="name" name="name" required>
+    </label>
+  </p>
+
+  <p>
+    <label for="kommentar">Kommentar:<br>
+      <textarea id="kommentar" name="kommentar" rows="4" required></textarea>
+    </label>
+  </p>
+
+  <button type="submit">Absenden</button>
+</form>
 </body> 
 </html>
 
