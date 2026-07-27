@@ -1,16 +1,848 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Namibia 2026</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Namibia – Kalahari, Fish River Canyon & Skeleton Coast – Reisebegleiter</title>
+
+<style>
+  :root {
+    --header-blue: #1F4C7A;
+    --leaf-green: #2E7D5B;
+    --sea-blue: #3C82B6;
+    --light-mint: #E4F3EE;
+    --ink: #000000;
+    --paper: #FFFFFF;
+    --line: #d7e2dc;
+    --badge-easy-bg: #E4F3EE;
+    --badge-easy-text: #2E7D5B;
+    --badge-medium-bg: #FBEFD9;
+    --badge-medium-text: #8A5A00;
+    --badge-hard-bg: #F7E1DA;
+    --badge-hard-text: #A6391C;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Source Sans 3", "Inter", Helvetica, Arial, sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.55;
+  }
+
+  .page {
+    max-width: 680px;
+    margin: 0 auto;
+    padding-bottom: 3rem;
+  }
+
+  .band-blue {
+    background: var(--header-blue);
+    color: #fff;
+    padding: 0.7rem 1.25rem;
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+  .band-green {
+    background: var(--leaf-green);
+    color: #fff;
+    padding: 0.6rem 1.25rem;
+    font-weight: 700;
+    font-size: 1.15rem;
+  }
+  .subline {
+    color: var(--header-blue);
+    font-size: 0.92rem;
+    font-weight: 600;
+    padding: 0.9rem 1.25rem 0;
+  }
+
+  section {
+    padding: 1.5rem 1.25rem 0;
+  }
+
+  h2 {
+    color: var(--header-blue);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 0 0.75rem;
+    padding-left: 0.6rem;
+    border-left: 3px solid var(--header-blue);
+  }
+
+  h2 .dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--leaf-green);
+    margin-right: 0.4rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--header-blue);
+    margin: 0 0 0.5rem;
+  }
+
+  .lead {
+    color: var(--ink);
+    font-size: 0.95rem;
+  }
+
+  .factbox {
+    background: var(--light-mint);
+    border: 1px solid var(--leaf-green);
+    border-radius: 6px;
+    padding: 1rem 1.1rem;
+    margin-top: 1rem;
+  }
+  .factbox h3 { margin-top: 0; }
+  .factbox dl {
+    margin: 0.5rem 0 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.35rem 0.75rem;
+    font-size: 0.92rem;
+  }
+  .factbox dt { font-weight: 700; color: var(--header-blue); }
+  .factbox dd { margin: 0; }
+  .factbox .disclaimer {
+    margin-top: 0.75rem;
+    font-size: 0.82rem;
+    color: #3a3a3a;
+  }
+
+  .stop {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 1.1rem 1.2rem;
+    margin: 1rem 0;
+  }
+
+  .stop-meta {
+    font-size: 0.88rem;
+    color: var(--header-blue);
+    font-weight: 600;
+    margin: 0 0 0.75rem;
+  }
+
+  table.glance {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+    margin: 0.5rem 0 1rem;
+  }
+  table.glance th {
+    background: var(--sea-blue);
+    color: #fff;
+    text-align: left;
+    padding: 0.4rem 0.5rem;
+    font-weight: 700;
+  }
+  table.glance td {
+    padding: 0.4rem 0.5rem;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+
+  .stop ul.activities {
+    margin: 0 0 1rem;
+    padding-left: 1.1rem;
+  }
+  .stop ul.activities li { margin-bottom: 0.35rem; }
+
+  .stop .notes-block p {
+    margin: 0 0 0.5rem;
+    font-size: 0.92rem;
+  }
+  .stop .notes-block p:last-child { margin-bottom: 0; }
+
+  .impressions {
+    margin-top: 1rem;
+    border-top: 1px dashed var(--line);
+    padding-top: 0.7rem;
+  }
+  .impressions h3 {
+    font-size: 0.92rem;
+    margin-bottom: 0.5rem;
+  }
+  .impressions ul {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+  .impressions li {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  .impressions .impression-date {
+    color: var(--header-blue);
+    font-weight: 700;
+    margin-right: 0.4rem;
+  }
+
+  details.private {
+    margin-top: 0.9rem;
+    border-top: 1px dashed var(--line);
+    padding-top: 0.7rem;
+  }
+  details.private summary {
+    cursor: pointer;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--leaf-green);
+    list-style: none;
+  }
+  details.private summary::before {
+    content: "🔒 ";
+  }
+  details.private .private-content {
+    margin-top: 0.5rem;
+    font-size: 0.88rem;
+    background: var(--light-mint);
+    border-radius: 6px;
+    padding: 0.6rem 0.75rem;
+  }
+  details.private .private-content p { margin: 0 0 0.4rem; }
+  details.private .private-content p:last-child { margin-bottom: 0; }
+
+  .leg {
+    background: #fff;
+    border-top: 2px dashed var(--leaf-green);
+    border-left: 1px solid var(--line);
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    border-radius: 0 0 6px 6px;
+    padding: 1rem 1.2rem;
+    margin: 0.5rem 1.25rem 1rem;
+  }
+
+  .leg-title {
+    color: var(--header-blue);
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin: 0 0 0.6rem;
+  }
+
+  .leg table.glance {
+    margin-bottom: 0.7rem;
+  }
+
+  .leg-badge {
+    display: inline-block;
+    padding: 0.25rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+  }
+  .leg-badge.easy   { background: var(--badge-easy-bg);   color: var(--badge-easy-text); }
+  .leg-badge.medium { background: var(--badge-medium-bg); color: var(--badge-medium-text); }
+  .leg-badge.hard   { background: var(--badge-hard-bg);   color: var(--badge-hard-text); }
+
+  .leg ul.poi {
+    margin: 0;
+    padding-left: 1.1rem;
+    font-size: 0.9rem;
+  }
+  .leg ul.poi li { margin-bottom: 0.3rem; }
+
+  footer {
+    text-align: center;
+    font-size: 0.78rem;
+    color: #555;
+    margin-top: 2rem;
+    padding: 0 1.25rem;
+  }
+</style>
 </head>
 <body>
-  <h1>Unsere Namibia-Reise 2026</h1>
-  <p>Hier entsteht das Reisetagebuch für unsere 23-tägige Tour durch Namibia.</p>
+<div class="page">
 
-  <h2>Reiseverlauf</h2>
-  <p>Abflug: 15. September 2026</p>
+  <div class="band-blue">Reise-Roadbook</div>
+  <div class="band-green">Namibia – Kalahari, Fish River Canyon & Skeleton Coast</div>
+  <p class="subline">17.09.–12.10.2026 · Namibia (Süden, Küste & Norden) · Selbstfahrer-Rundreise, 23 Ü, ca. 4.315 km</p>
+
+  <!-- Überblick -->
+  <section>
+    <h2><span class="dot"></span>Überblick</h2>
+    <p class="lead">
+      Diese Rundreise führt euch als Selbstfahrer durch den Süden, die Küste und den Norden Namibias –
+      mit einem Tagesausflug in den Kgalagadi Transfrontier Park auf der südafrikanischen Seite (via
+      Mata-Mata). Die Route verläuft von Windhoek über Kgalagadi, Keetmanshoop, den Fish River Canyon,
+      Lüderitz, Solitaire, Walvis Bay und Swakopmund weiter an die Skeleton Coast (Terrace Bay), über
+      Khowarib bis Epupa Falls an der Grenze zu Angola, und schließlich durch Etosha zurück nach
+      Windhoek. 13 Stationen, 23 Übernachtungen, rund 4.315 km. Schwerpunkte sind Wüstenlandschaften,
+      Wildtiere, die Geisterstadt Kolmanskop, der Köcherbaumwald sowie Wüstenelefanten und die
+      Epupa-Wasserfälle.
+    </p>
+
+    <div class="factbox">
+      <h3>Einreise & Gesundheit</h3>
+      <dl>
+        <dt>Visum</dt>
+        <dd>Namibia: Visa on Arrival, laut Planung bereits beantragt – Status vor Abreise final
+        bestätigen. Für den Kgalagadi-Tagesausflug (Grenzübertritt Mata-Mata nach Südafrika) reicht
+        für deutsche Staatsangehörige bei Kurzaufenthalt ein gültiger Reisepass (mind. 30 Tage über
+        Reiseende hinaus gültig), zusätzliches Visum nicht nötig. Grenzöffnung Mata-Mata täglich
+        08:00–16:30 Uhr.</dd>
+        <dt>Impfungen</dt>
+        <dd>Standardimpfungen auffrischen (Tetanus, Diphtherie, Polio, MMR). Empfohlen: Hepatitis A,
+        bei Langzeitaufenthalt/besonderer Exposition auch Hepatitis B, Typhus, Meningokokken ACWY,
+        Tollwut. Keine Pflichtimpfung bei Direkteinreise aus Deutschland; Gelbfieber-Nachweis nur bei
+        Einreise aus/Transit durch Endemiegebiet.</dd>
+        <dt>Malariaprophylaxe</dt>
+        <dd>Epupa Falls/Kunene-Region: ganzjährig hohes Risiko – Prophylaxe ernsthaft mit
+        Reisemediziner besprechen. Etosha: offiziell ganzjährig mittleres Risiko, in der Trockenzeit
+        (entspricht dem Reisezeitraum) reduziert – Mückenschutz konsequent. Restliche Route (Windhoek,
+        Süden, Küste inkl. Lüderitz/Swakopmund/Walvis Bay): malariafrei.</dd>
+      </dl>
+      <p class="disclaimer">Stand der Recherche (Juli 2026) – bitte vor Reiseantritt offiziell beim
+      Auswärtigen Amt bzw. einer reisemedizinischen Beratungsstelle bestätigen.</p>
+    </div>
+  </section>
+
+  <!-- 1. Windhoek – Bryan's View (Anreise) -->
+  <section>
+    <h2><span class="dot"></span>Windhoek – Bryan's View (Anreise)</h2>
+    <p class="stop-meta">18.09.2026 (1 Ü)</p>
+    <div class="stop">
+      <table class="glance">
+        <tr><th>Adresse</th><td>Bryan O'Linn Close 1, 9000 Windhoek, Namibia (mit
+        Buchungsbestätigung abgeglichen und bestätigt)</td></tr>
+        <tr><th>Zeitraum</th><td>18.09.2026 – 19.09.2026</td></tr>
+      </table>
+      <h3>Aktivitäten</h3>
+      <ul class="activities">
+        <li>Ankunft, Mietwagenübernahme</li>
+        <li>Abendessen in Joe's Beerhouse, 160 Nelson Mandela Ave, Windhoek</li>
+      </ul>
+      <div class="notes-block">
+        <h3>Praktische Hinweise</h3>
+        <p>Landung Windhoek 08:10 Uhr, Mietwagenübernahme direkt am Flughafen.</p>
+      </div>
+      <details class="private">
+        <summary>Private Notizen</summary>
+        <div class="private-content">
+          <p>Preis 67 €, Storno bis 03.09.2026.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- Etappe 1 -->
+  <div class="leg">
+    <p class="leg-title">🛣️ Etappe: Windhoek → Torgos Lodge (Kgalagadi)</p>
+    <table class="glance">
+      <tr><th>Strecke</th><td>566 km</td></tr>
+      <tr><th>Fahrzeit</th><td>6 Std. 15 Min. (inkl. Puffer)</td></tr>
+    </table>
+    <span class="leg-badge medium">Piste</span>
+    <ul class="poi">
+      <li>B1 asphaltiert bis Gochas, letzter Abschnitt C15 Schotter</li>
+      <li>Gochas (letzte Tankmöglichkeit/kleine Läden vor der Grenze)</li>
+    </ul>
+  </div>
+
+  <!-- 2. Torgos Lodge -->
+  <section>
+    <h2><span class="dot"></span>Torgos Lodge (Kgalagadi) – Stone Chalet</h2>
+    <p class="stop-meta">19.–22.09.2026 (4 Ü)</p>
+    <div class="stop">
+      <table class="glance">
+        <tr><th>Adresse</th><td>Farm Dispute 327, C15-Straße, Karas-Region, Namibia (Mata-Mata, nahe
+        Koës) – ca. 5–7 km vom Mata-Mata-Grenzposten, Namibia-Seite außerhalb des Parks</td></tr>
+        <tr><th>Zeitraum</th><td>19.09.2026 – 23.09.2026</td></tr>
+      </table>
+      <h3>Aktivitäten</h3>
+      <ul class="activities">
+        <li>Tagesausflüge in den Kgalagadi Transfrontier Park via Mata-Mata (Pirschfahrten,
+        Sundowner-Fahrten laut Lodge)</li>
+        <li>Parkeintritt ca. R512/Person/Tag</li>
+      </ul>
+      <div class="notes-block">
+        <h3>Praktische Hinweise</h3>
+        <p>Grenzposten Mata-Mata täglich 08:00–16:30 Uhr geöffnet – Rückkehr aus dem Park rechtzeitig
+        einplanen.</p>
+        <p>Reisepass für den Grenzübertritt mitführen.</p>
+      </div>
+      <details class="private">
+        <summary>Private Notizen</summary>
+        <div class="private-content">
+          <p>Gesamtpreis für 4 Ü Stone Chalet final bestätigt: 750 €.</p>
+          <p>Parkeintritt gesamt 200 €.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- Etappe 2 -->
+  <div class="leg">
+    <p class="leg-title">🛣️ Etappe: Torgos Lodge → Keetmanshoop</p>
+    <table class="glance">
+      <tr><th>Strecke</th><td>260 km</td></tr>
+      <tr><th>Fahrzeit</th><td>3 Std. 15 Min. (Straße C17)</td></tr>
+    </table>
+    <span class="leg-badge medium">Piste</span>
+  </div>
+
+  <!-- Etappe 3 -->
+  <div class="leg">
+    <p class="leg-title">🛣️ Etappe: Keetmanshoop → Fish River Canyon (Gondwana Canyon Lodge)</p>
+    <table class="glance">
+      <tr><th>Strecke</th><td>154 km</td></tr>
+      <tr><th>Fahrzeit</th><td>2 Std. (Straße C12)</td></tr>
+    </table>
+    <span class="leg-badge medium">Piste</span>
+    <ul class="poi">
+      <li>Quiver Tree Forest & Spielplatz der Riesen (ca. 17 km vor Keetmanshoop)</li>
+      <li>Garas Park Camp mit Köcherbäumen (20 km nördlich an der B1)</li>
+      <li>Hinweis: Keetmanshoop ist hier reiner Durchfahrtsort auf der Strecke, keine eigene
+      Übernachtung</li>
+    </ul>
+  </div>
+
+  <!-- 3. Gondwana Canyon Lodge -->
+  <section>
+    <h2><span class="dot"></span>Gondwana Canyon Lodge (Fish River Canyon)</h2>
+    <p class="stop-meta">23.09.2026 (1 Ü)</p>
+    <div class="stop">
+      <table class="glance">
+        <tr><th>Adresse</th><td>Gondwana Canyon Park, ca. 20 km östlich des Fish River Canyon, Zufahrt
+        über C37, Karas-Region, Namibia – keine Straßenadresse (abgelegene Lodge)</td></tr>
+        <tr><th>Zeitraum</th><td>23.09.2026 – 24.09.2026</td></tr>
+      </table>
+      <h3>Aktivitäten</h3>
+      <ul class="activities">
+        <li>Hobas-Hauptaussichtspunkt (Hell's Bend), ca. 20 km von der Lodge – Parktor schließt bei
+        Sonnenuntergang, rechtzeitig zurückfahren</li>
+      </ul>
+      <details class="private">
+        <summary>Private Notizen</summary>
+        <div class="private-content">
+          <p>Preis 308,15 €, 2 Zimmer gebucht von Kerstin, Storno bis 23.08.2026.</p>
+          <p>Zahlung komplett 616,33 € (Barclay 22.12.25, 50 % Silke/Wolle).</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- Etappe 4 -->
+  <div class="leg">
+    <p class="leg-title">🛣️ Etappe: Fish River Canyon → Lüderitz</p>
+    <table class="glance">
+      <tr><th>Strecke</th><td>425 km</td></tr>
+      <tr><th>Fahrzeit</th><td>4 Std. 30 Min. (Straße C12/B4)</td></tr>
+    </table>
+    <span class="leg-badge medium">Piste</span>
+    <ul class="poi">
+      <li>C12 Schotter, letzter Abschnitt B4 asphaltiert</li>
+      <li>Wildpferde von Garub (ca. 20 km hinter Aus an der B4, Schotter-Zufahrt, mit normalem Auto
+      befahrbar, kostenlos, Beobachtungsstand mit Schattendach)</li>
+    </ul>
+  </div>
+
+  <!-- 4. Lüderitz -->
+  <section>
+    <h2><span class="dot"></span>Lüderitz – Kairos Cottage B&B</h2>
+    <p class="stop-meta">24.–25.09.2026 (2 Ü, inkl. Frühstück)</p>
+    <div class="stop">
+      <table class="glance">
+        <tr><th>Adresse</th><td>Kreplin Street, Shark Island, 9000 Lüderitz, Karas-Region,
+        Namibia</td></tr>
+        <tr><th>Zeitraum</th><td>24.09.2026 – 26.09.2026</td></tr>
+      </table>
+      <h3>Aktivitäten</h3>
+      <ul class="activities">
+        <li>Kolmanskop (Geisterstadt, 12 km/15 Min. vor Lüderitz)</li>
+        <li>Diaz Point (ca. 10 km, historisches Kreuz & Robbenkolonie)</li>
+      </ul>
+      <div class="notes-block">
+        <h3>Praktische Hinweise</h3>
+        <p>Kolmanskop bis 10:00 Uhr oder ab 15:00 Uhr besuchen – nachmittags oft windig, daher lieber
+        morgens.</p>
+      </div>
+      <details class="private">
+        <summary>Private Notizen</summary>
+        <div class="private-content">
+          <p>Preis 143,36 €, Storno bis 24.08.2026.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- Etappe 5 -->
+  <div class="leg">
+    <p class="leg-title">🛣️ Etappe: Lüderitz → Solitaire</p>
+    <table class="glance">
+      <tr><th>Strecke</th><td>338 km</td></tr>
+      <tr><th>Fahrzeit</th><td>6 Std. 50 Min. (inkl. Puffer)</td></tr>
+    </table>
+    <span class="leg-badge medium">Waschbrett-Piste / anspruchsvoll</span>
+    <ul class="poi">
+      <li>Erhöhte Aufmerksamkeit: die Fahrzeit ist für die Distanz ungewöhnlich lang, deutet auf
+      schlechteren Untergrund hin</li>
+      <li>Schloss Duwisib (Abstecher)</li>
+    </ul>
+  </div>
+
+  <!-- 5. Solitaire -->
+  <section>
+    <h2><span class="dot"></span>Solitaire Roadhouse</h2>
+    <p class="stop-meta">26.09.2026 (1 Ü, inkl. Frühstück)</p>
+    <div class="stop">
+      <table class="glance">
+        <tr><th>Adresse</th><td>Solitaire Village, C14-Straße (Solitaire Farm Portion 2 Nr. 412),
+        9000 Solitaire, Namibia</td></tr>
+        <tr><th>Zeitraum</th><td>26.09.2026 – 27.09.2026</td></tr>
+      </table>
+      <details class="private">
+        <summary>Private Notizen</summary>
+        <div class="private-content">
+          <p>Preis 119 €, Storno bis 26.08.2026.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- Etappe 6 -->
+  <div class="leg">
+    <p class="leg-title">🛣️ Etappe: Solitaire → Walvis Bay</p>
+    <table class="glance">
+      <tr><th>Strecke</th><td>233 km</td></tr>
+      <tr><th>Fahrzeit</th><td>3 Std.</td></tr>
+    </table>
+    <span class="leg-badge medium">Piste</span>
+  </div>
+
+  <!-- 6. Walvis Bay -->
+  <section>
+    <h2><span class="dot"></span>Walvis Bay – Kleines Nest B&B</h2>
+    <p class="stop-meta">27.–28.09.2026 (2 Ü)</p>
+    <div class="stop">
+      <table class="glance">
+        <tr><th>Adresse</th><td>36 Esplanade, Walvis Bay, Namibia</td></tr>
+        <tr><th>Zeitraum</th><td>27.09.2026 – 29.09.2026</td></tr>
+      </table>
+      <h3>Aktivitäten</h3>
+      <ul class="activities">
+        <li>27.09. (Anreisetag): entspannter Sunset an der Lagune/Waterfront, an einem der "Bird
+        Viewpoints" entlang der Promenade – nah an der Unterkunft, kein Sand-Fahren nötig</li>
+        <li>28.09., 08:30 Uhr: gebuchte Halbtagestour Sandwich Harbour (geführt, nicht selbst fahren –
+        Gezeiten-abhängige Strandpassage und steile Dünenflanken erfordern ortskundige Guides)</li>
+        <li>28.09. nach der Tour (nachmittags/abends): Düne mit Meerblick bei Langstrand/Dolphin Beach
+        – Auto nur bis zu einem sicheren Zugang/Abstellpunkt fahren, für den Meerblick zu Fuß auf die
+        Dünenkante hochlaufen statt in weichen Sand reinzufahren; Ankunft ca. 60–75 Min. vor
+        Sonnenuntergang</li>
+        <li>Flamingo-Beobachtung an der Lagune (ganzjährig möglich, Hauptsaison Nov.–Apr.)</li>
+        <li>Dune 7 (höchste leicht zugängliche Düne der Region, sehr nah an der Stadt) – falls an
+        einem der beiden Tage noch Zeit ist</li>
+      </ul>
+      <div class="notes-block">
+        <h3>Praktische Hinweise</h3>
+        <p>Sandwich-Harbour-Tour: geführte Tour, kein Selbstfahren, auch nicht mit Permit.</p>
+        <p>Langstrand/Dolphin Beach: nur auf bestehenden Spuren/zugelassenen Zufahrten bleiben
+        (Dünengürtel zwischen Walvis Bay und Langstrand – Fahrzeuge außerhalb markierter Wege
+        benötigen ein gesondertes Off-Road-Permit); Auto so abstellen, dass ihr ohne Rangieren wieder
+        rauskommt; spätestens in der Dämmerung auf dem Rückweg sein.</p>
+        <p>Nach der Sandwich-Harbour-Tour die Abendtour zur Düne bewusst kurz halten (Ermüdung nach
+        der mehrstündigen 4x4-Fahrt am Vormittag einplanen).</p>
+        <p>Küstennebel ist an dieser Küste normal – Sunset wird dann weicher/pastellig, bleibt aber
+        fotogen.</p>
+        <p>Abendessen mit Sunset: The Raft (Esplanade, direkt an der Lagune, wenige Schritte von der
+        Unterkunft) oder Anchors @ the Jetty (Atlantic Street/Waterfront) – beide 2026 bestätigt
+        geöffnet, Reservierung mit Fensterplatz/Lagunenblick empfehlenswert, ca. 45–60 Min. vor
+        Sonnenuntergang starten.</p>
+      </div>
+      <details class="private">
+        <summary>Private Notizen</summary>
+        <div class="private-content">
+          <p>Preis 113 €, 2 Zimmer gebucht von Kerstin, Storno bis 19.09.2026.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- Etappe 7 -->
+  <div class="leg">
+    <p class="leg-title">🛣️ Etappe: Walvis Bay → Swakopmund</p>
+    <table class="glance">
+      <tr><th>Strecke</th><td>35 km</td></tr>
+      <tr><th>Fahrzeit</th><td>30 Min.</td></tr>
+    </table>
+    <span class="leg-badge easy">Asphalt</span>
+    <ul class="poi">
+      <li>Flamingo-Beobachtung (ganzjährig, Hauptsaison Nov.–Apr.)</li>
+    </ul>
+  </div>
+
+  <!-- 7. Swakopmund -->
+  <section>
+    <h2><span class="dot"></span>Swakopmund – Hotel A la Mer</h2>
+    <p class="stop-meta">29.09.2026 (1 Ü, inkl. Frühstück)</p>
+    <div class="stop">
+      <table class="glance">
+        <tr><th>Adresse</th><td>4 Libertina Amathila Avenue, 9000 Swakopmund, Namibia</td></tr>
+        <tr><th>Zeitraum</th><td>29.09.2026 – 30.09.2026</td></tr>
+      </table>
+      <h3>Aktivitäten</h3>
+      <ul class="activities">
+        <li>Freie Zeit in Swakopmund</li>
+      </ul>
+      <div class="notes-block">
+        <h3>Praktische Hinweise</h3>
+        <p>Abendessen-Tipp The Tug (A. Schad Promenade/Molen Road, Jetty-Bereich) – Klassiker direkt
+        am Meer, gute Sunset-Lage, 2026 bestätigt geöffnet (Mo–Sa 17:00–22:00, So 12:00–22:00),
+        Reservierung empfohlen.</p>
+      </div>
+      <details class="private">
+        <summary>Private Notizen</summary>
+        <div class="private-content">
+          <p>Preis 117,37 €, Storno bis 07.09.2026.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- Etappe 8 -->
+  <div class="leg">
+    <p class="leg-title">🛣️ Etappe: Swakopmund → Terrace Bay (Skeleton Coast)</p>
+    <table class="glance">
+      <tr><th>Strecke</th><td>365 km</td></tr>
+      <tr><th>Fahrzeit</th><td>4 Std. 30 Min.</td></tr>
+    </table>
+    <span class="leg-badge medium">Piste</span>
+    <ul class="poi">
+      <li>Salzstraße entlang der Küste</li>
+      <li>Schiffswrack "Die Zeila" (1 Std. 10/90 km, kurz vor Henties Bay)</li>
+      <li>Seelöwenkolonie Cape Cross (2 Std./160 km)</li>
+      <li>Ugabmund Gate – Eingang Skeleton Coast NP (2 Std. 40/230 km)</li>
+      <li>Verlassene Ölbohrplattform (3 Std. 15/275 km)</li>
+    </ul>
+  </div>
+
+  <!-- 8. Terrace Bay -->
+  <section>
+    <h2><span class="dot"></span>Terrace Bay Resort (Skeleton Coast)</h2>
+    <p class="stop-meta">30.09.2026 (1 Ü)</p>
+    <div class="stop">
+      <table class="glance">
+        <tr><th>Adresse</th><td>Terrace Bay, Skeleton Coast National Park, Kunene-Region, Namibia –
+        keine Straßenadresse, nur über die Parktore erreichbar (Park geöffnet 08:00–18:00 Uhr)</td></tr>
+        <tr><th>Zeitraum</th><td>30.09.2026 – 01.10.2026</td></tr>
+      </table>
+      <h3>Aktivitäten</h3>
+      <ul class="activities">
+        <li>Skeleton-Coast-Highlights auf der Anfahrt (siehe Etappe Swakopmund → Terrace Bay)</li>
+      </ul>
+      <details class="private">
+        <summary>Private Notizen</summary>
+        <div class="private-content">
+          <p>Preis für 2 Zimmer 280 €, gebucht von Kerstin.</p>
+          <p>Anzahlung Barclay 18.11.2025: 110,77 €; Restzahlung Trade 14.07.2026: 176,77 € (davon
+          50 % Silke/Wolle).</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- Etappe 9 -->
+  <div class="leg">
+    <p class="leg-title">🛣️ Etappe: Terrace Bay → Khowarib Lodge</p>
+    <table class="glance">
+      <tr><th>Strecke</th><td>270 km</td></tr>
+      <tr><th>Fahrzeit</th><td>4 Std. 15 Min.</td></tr>
+    </table>
+    <span class="leg-badge medium">Piste</span>
+  </div>
+
+  <!-- 9. Khowarib Lodge -->
+  <section>
+    <h2><span class="dot"></span>Khowarib Lodge</h2>
+    <p class="stop-meta">01.–03.10.2026 (3 Ü)</p>
+    <div class="stop">
+      <table class="glance">
+        <tr><th>Adresse</th><td>D3706, westlich der Khowarib-Siedlung, ca. 30 km von Sesfontein,
+        Kunene-Region, Namibia</td></tr>
+        <tr><th>Zeitraum</th><td>01.10.2026 – 04.10.2026</td></tr>
+      </table>
+      <h3>Aktivitäten</h3>
+      <ul class="activities">
+        <li>Geführte Tagestour zu den Wüstenelefanten</li>
+        <li>Tagestour Damaraland</li>
+      </ul>
+      <details class="private">
+        <summary>Private Notizen</summary>
+        <div class="private-content">
+          <p>Preis 323,30 €, Storno bis 01.08.2026.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- Etappe 10 -->
+  <div class="leg">
+    <p class="leg-title">🛣️ Etappe: Khowarib Lodge → Epupa Falls Lodge (Kunene-Grenze)</p>
+    <table class="glance">
+      <tr><th>Strecke</th><td>380 km</td></tr>
+      <tr><th>Fahrzeit</th><td>6 Std.</td></tr>
+    </table>
+    <span class="leg-badge hard">4x4 empfohlen</span>
+    <ul class="poi">
+      <li>Abgelegene Region, teils sandige/steinige Abschnitte</li>
+      <li>Fahrzeit unbedingt einplanen, keine Fahrten in der Dämmerung wegen Wildwechsel</li>
+    </ul>
+  </div>
+
+  <!-- 10. Epupa Falls Lodge -->
+  <section>
+    <h2><span class="dot"></span>Epupa Falls Lodge</h2>
+    <p class="stop-meta">04.–05.10.2026 (2 Ü, inkl. Halbpension)</p>
+    <div class="stop">
+      <table class="glance">
+        <tr><th>Adresse</th><td>Epupa Falls, am Kunene-Fluss (Grenze zu Angola), Kunene-Region,
+        Namibia – keine Straßenadresse, ca. 3 Std. Fahrt von Opuwo. Hinweis: Am Standort gibt es
+        mehrere ähnlich benannte Lodges (u. a. Epupa Falls Lodge & Campsite, Omarunga Epupa-Falls
+        Camp) – bitte den genauen Namen gegen die Buchungsbestätigung prüfen.</td></tr>
+        <tr><th>Zeitraum</th><td>04.10.2026 – 06.10.2026</td></tr>
+      </table>
+      <h3>Aktivitäten</h3>
+      <ul class="activities">
+        <li>Epupa Falls (Wasserfälle am Kunene, Grenze zu Angola)</li>
+      </ul>
+      <div class="notes-block">
+        <h3>Praktische Hinweise</h3>
+        <p>Region mit ganzjährig hohem Malariarisiko – Mückenschutz und ggf. Prophylaxe beachten
+        (siehe Abschnitt Einreise & Gesundheit).</p>
+      </div>
+      <details class="private">
+        <summary>Private Notizen</summary>
+        <div class="private-content">
+          <p>Preis 350 €, angezahlt 87,92 €, Storno bis 03.09.2026 (Kerstin, Trade 15.11.2025).</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- Etappe 11 -->
+  <div class="leg">
+    <p class="leg-title">🛣️ Etappe: Epupa Falls → Okamanja Lodge (Richtung Etosha, Galton Gate West)</p>
+    <table class="glance">
+      <tr><th>Strecke</th><td>325 km</td></tr>
+      <tr><th>Fahrzeit</th><td>4 Std. 10 Min.</td></tr>
+    </table>
+    <span class="leg-badge medium">Piste</span>
+  </div>
+
+  <!-- 11. Okamanja Lodge -->
+  <section>
+    <h2><span class="dot"></span>Okamanja Lodge</h2>
+    <p class="stop-meta">06.10.2026 (1 Ü, inkl. Frühstück)</p>
+    <div class="stop">
+      <table class="glance">
+        <tr><th>Adresse</th><td>Kamanjab (ca. 350 m vom Ortszentrum), Kunene-Region, Namibia – genaue
+        Straßenadresse nicht öffentlich auffindbar</td></tr>
+        <tr><th>Zeitraum</th><td>06.10.2026 – 07.10.2026</td></tr>
+      </table>
+      <div class="notes-block">
+        <h3>Praktische Hinweise</h3>
+        <p>Liegt 1 Std. weiter auf der C35.</p>
+      </div>
+      <details class="private">
+        <summary>Private Notizen</summary>
+        <div class="private-content">
+          <p>Preis 65 €, 2 Zimmer gebucht von Kerstin, Storno bis 19.09.2026.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- Etappe 12 -->
+  <div class="leg">
+    <p class="leg-title">🛣️ Etappe: Okamanja Lodge → Eldorado Lodge (durch Etosha, Anderson Gate)</p>
+    <table class="glance">
+      <tr><th>Strecke</th><td>190 km</td></tr>
+      <tr><th>Fahrzeit</th><td>5–6 Std. (Fahrt durch den Park)</td></tr>
+    </table>
+    <span class="leg-badge medium">Piste</span>
+    <ul class="poi">
+      <li>Häufiger Wildwechsel, Geschwindigkeit anpassen</li>
+      <li>Parktore vor Torschluss erreichen</li>
+    </ul>
+  </div>
+
+  <!-- 12. Eldorado Lodge -->
+  <section>
+    <h2><span class="dot"></span>Eldorado Lodge (Etosha)</h2>
+    <p class="stop-meta">07.–09.10.2026 (3 Ü, inkl. Halbpension)</p>
+    <div class="stop">
+      <table class="glance">
+        <tr><th>Adresse</th><td>Farm Eldorado, ca. 8 km südlich des Anderson Gate, Ombika/Okaukuejo,
+        Etosha-Region, Namibia – keine Straßenadresse (Familienfarm)</td></tr>
+        <tr><th>Zeitraum</th><td>07.10.2026 – 10.10.2026</td></tr>
+      </table>
+      <h3>Aktivitäten</h3>
+      <ul class="activities">
+        <li>Pirschfahrten im Etosha Nationalpark</li>
+      </ul>
+      <details class="private">
+        <summary>Private Notizen</summary>
+        <div class="private-content">
+          <p>Preis 865,31 €, Storno bis 06.09.2026 (Kerstin, Trade 12.11.2025).</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- Etappe 13 -->
+  <div class="leg">
+    <p class="leg-title">🛣️ Etappe: Eldorado Lodge → Windhoek</p>
+    <table class="glance">
+      <tr><th>Strecke</th><td>440 km</td></tr>
+      <tr><th>Fahrzeit</th><td>4 Std. 30 Min. (Straße B1)</td></tr>
+    </table>
+    <span class="leg-badge easy">Asphalt</span>
+  </div>
+
+  <!-- 13. Windhoek – Bryan's View (Abreise) -->
+  <section>
+    <h2><span class="dot"></span>Windhoek – Bryan's View (Abreise)</h2>
+    <p class="stop-meta">10.10.2026 (1 Ü)</p>
+    <div class="stop">
+      <table class="glance">
+        <tr><th>Adresse</th><td>Bryan O'Linn Close 1, 9000 Windhoek, Namibia</td></tr>
+        <tr><th>Zeitraum</th><td>10.10.2026 – 11.10.2026</td></tr>
+      </table>
+      <h3>Aktivitäten</h3>
+      <ul class="activities">
+        <li>Abendessen in Joe's Beerhouse, 160 Nelson Mandela Ave, Windhoek</li>
+      </ul>
+      <div class="notes-block">
+        <h3>Praktische Hinweise</h3>
+        <p>Rückflug am 11.10.2026, 19:15 Uhr; Landung Frankfurt 12.10.2026, 05:25 Uhr.</p>
+      </div>
+      <details class="private">
+        <summary>Private Notizen</summary>
+        <div class="private-content">
+          <p>Preis 68,04 €, Storno bis 25.09.2026.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <footer>
+    Reise-Roadbook · privat erstellt mit Kompass
+  </footer>
+
+</div>
+</body>
+</html>
 
   <h2>Kommentare</h2>
   <p>Hier könnt ihr während der Reise eure Gedanken dalassen (Formular folgt).</p>
