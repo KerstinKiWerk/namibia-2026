@@ -94,6 +94,23 @@
     font-size: 0.95rem;
   }
 
+  .stations-list {
+    margin-top: 1rem;
+  }
+  .stations-list h3 { margin-bottom: 0.5rem; }
+  .stations-list ol {
+    margin: 0;
+    padding-left: 1.3rem;
+    font-size: 0.92rem;
+  }
+  .stations-list li { margin-bottom: 0.4rem; }
+  .stations-list a {
+    color: var(--sea-blue);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .stations-list a:hover { text-decoration: underline; }
+
   .factbox {
     background: var(--light-mint);
     border: 1px solid var(--leaf-green);
@@ -283,6 +300,25 @@
       Epupa-Wasserfälle.
     </p>
 
+    <div class="stations-list">
+      <h3>Stationen</h3>
+      <ol>
+        <li><a href="#stop-1">Windhoek – Bryan's View (Anreise)</a></li>
+        <li><a href="#stop-2">Torgos Lodge (Kgalagadi) – Stone Chalet</a></li>
+        <li><a href="#stop-3">Gondwana Canyon Lodge (Fish River Canyon)</a></li>
+        <li><a href="#stop-4">Lüderitz – Kairos Cottage B&B</a></li>
+        <li><a href="#stop-5">Solitaire Roadhouse</a></li>
+        <li><a href="#stop-6">Walvis Bay – Kleines Nest B&B</a></li>
+        <li><a href="#stop-7">Swakopmund – Hotel A la Mer</a></li>
+        <li><a href="#stop-8">Terrace Bay Resort (Skeleton Coast)</a></li>
+        <li><a href="#stop-9">Khowarib Lodge</a></li>
+        <li><a href="#stop-10">Epupa Falls Lodge</a></li>
+        <li><a href="#stop-11">Okamanja Lodge</a></li>
+        <li><a href="#stop-12">Eldorado Lodge (Etosha)</a></li>
+        <li><a href="#stop-13">Windhoek – Bryan's View (Abreise)</a></li>
+      </ol>
+    </div>
+
     <div class="factbox">
       <h3>Einreise & Gesundheit</h3>
       <dl>
@@ -310,7 +346,7 @@
 
   <!-- 1. Windhoek – Bryan's View (Anreise) -->
   <section>
-    <h2><span class="dot"></span>Windhoek – Bryan's View (Anreise)</h2>
+    <h2 id="stop-1"><span class="dot"></span>Windhoek – Bryan's View (Anreise)</h2>
     <p class="stop-meta">18.09.2026 (1 Ü)</p>
     <div class="stop">
       <table class="glance">
@@ -353,7 +389,7 @@
 
   <!-- 2. Torgos Lodge -->
   <section>
-    <h2><span class="dot"></span>Torgos Lodge (Kgalagadi) – Stone Chalet</h2>
+    <h2 id="stop-2"><span class="dot"></span>Torgos Lodge (Kgalagadi) – Stone Chalet</h2>
     <p class="stop-meta">19.–22.09.2026 (4 Ü)</p>
     <div class="stop">
       <table class="glance">
@@ -385,33 +421,51 @@
 
   <!-- Etappe 2 -->
   <div class="leg">
-    <p class="leg-title">🛣️ Etappe: Torgos Lodge → Keetmanshoop</p>
+    <p class="leg-title">🛣️ Etappe: Torgos Lodge → Fish River Canyon (Gondwana Canyon Lodge), mit ca. 2 Std. Pause bei Keetmanshoop</p>
     <table class="glance">
-      <tr><th>Strecke</th><td>260 km</td></tr>
-      <tr><th>Fahrzeit</th><td>3 Std. 15 Min. (Straße C17)</td></tr>
+      <tr><th>Strecke</th><td>414 km gesamt (260 km Torgos Lodge–Keetmanshoop + 154 km
+      Keetmanshoop–Fish River Canyon)</td></tr>
+      <tr><th>Fahrzeit</th><td>5 Std. 15 Min. reine Fahrzeit + ca. 2 Std. Programm bei Keetmanshoop
+      ≈ 7 Std. 15 Min. gesamt</td></tr>
+      <tr><th>Straßen</th><td>C17, dann C12</td></tr>
     </table>
-    <span class="leg-badge medium">Piste</span>
-  </div>
-
-  <!-- Etappe 3 -->
-  <div class="leg">
-    <p class="leg-title">🛣️ Etappe: Keetmanshoop → Fish River Canyon (Gondwana Canyon Lodge)</p>
-    <table class="glance">
-      <tr><th>Strecke</th><td>154 km</td></tr>
-      <tr><th>Fahrzeit</th><td>2 Std. (Straße C12)</td></tr>
-    </table>
-    <span class="leg-badge medium">Piste</span>
+    <span class="leg-badge medium">Piste (durchgängig Schotter)</span>
     <ul class="poi">
-      <li>Quiver Tree Forest & Spielplatz der Riesen (ca. 17 km vor Keetmanshoop)</li>
-      <li>Garas Park Camp mit Köcherbäumen (20 km nördlich an der B1)</li>
-      <li>Hinweis: Keetmanshoop ist hier reiner Durchfahrtsort auf der Strecke, keine eigene
-      Übernachtung</li>
+      <li>Hinweis: Keetmanshoop ist reiner Zwischenstopp, keine eigene Übernachtung.</li>
+      <li>Garas Park (Köcherbäume, ca. 20 km nördlich auf der B1) liegt für die Weiterfahrt nach
+      Süden in die falsche Richtung und wird im 2-Std.-Fenster ausgelassen – das Köcherbaum-Motiv
+      gibt es mit Gariganus ohnehin schon.</li>
+      <li>Bei ca. 7 Std. 15 Min. Gesamtdauer für diesen Tag: spätestens um 7 Uhr ab Torgos Lodge
+      starten, dann Ankunft am Fish River Canyon noch vor 15:00 Uhr, deutlich vor Einbruch der
+      Dämmerung.</li>
+      <li>Programm für die ca. 2 Std. bei Keetmanshoop (Start ca. 14 km vor der Stadt, kommend von
+      Torgos Lodge auf der C17):
+        <ol style="margin: 0.5rem 0 0; padding-left: 1.3rem;">
+          <li>0:00–0:10: Abzweig Gariganus-Farm an der C17 (ca. 14 km vor Keetmanshoop), Permit an
+          der Rezeption kaufen (deckt Quiver Tree Forest & Giant's Playground ab, ca. N$110–130
+          p. P.)</li>
+          <li>0:10–0:40: Quiver Tree Forest – markierter Rundweg (ca. 20–30 Min.), teils 200–300
+          Jahre alte Köcherbäume zwischen dunklen Dolerit-Felsen</li>
+          <li>0:40–0:50: Weiterfahrt zum Giant's Playground (ca. 5 km Schotter, ca. 10 Min.)</li>
+          <li>0:50–1:20: Giant's Playground – Rundweg durch die Felsformationen (ca. 30 Min.);
+          Markierung ist laut mehreren Berichten stellenweise lückig – auf dem rechtsdrehenden
+          Hauptpfad bleiben, nicht auf eigene Faust abkürzen</li>
+          <li>1:20–1:35: Rückfahrt zur C17 und weiter nach Keetmanshoop (ca. 14 km, ca. 15 Min.)</li>
+          <li>1:35–1:55: Kurzer Stopp im Ortszentrum Keetmanshoop – Alte Kaiserliche Post (heute
+          Museum) und/oder Rheinische Missionskirche, dazu tanken und Vorräte auffüllen (letzte
+          größere Versorgungsmöglichkeit vor dem Fish River Canyon)</li>
+          <li>1:55–2:00: Weiterfahrt nach Süden auf der C12 zum Fish River Canyon</li>
+        </ol>
+      </li>
+      <li>Praktischer Hinweis: Beste Lichtstimmung am Quiver Tree Forest wäre eigentlich
+      Sonnenuntergang – passt aber nicht in dieses Tagesprogramm. Auch am Vormittag/Mittag ist der
+      Ort sehenswert, nur die Fotos werden weniger golden.</li>
     </ul>
   </div>
 
   <!-- 3. Gondwana Canyon Lodge -->
   <section>
-    <h2><span class="dot"></span>Gondwana Canyon Lodge (Fish River Canyon)</h2>
+    <h2 id="stop-3"><span class="dot"></span>Gondwana Canyon Lodge (Fish River Canyon)</h2>
     <p class="stop-meta">23.09.2026 (1 Ü)</p>
     <div class="stop">
       <table class="glance">
@@ -451,7 +505,7 @@
 
   <!-- 4. Lüderitz -->
   <section>
-    <h2><span class="dot"></span>Lüderitz – Kairos Cottage B&B</h2>
+    <h2 id="stop-4"><span class="dot"></span>Lüderitz – Kairos Cottage B&B</h2>
     <p class="stop-meta">24.–25.09.2026 (2 Ü, inkl. Frühstück)</p>
     <div class="stop">
       <table class="glance">
@@ -495,7 +549,7 @@
 
   <!-- 5. Solitaire -->
   <section>
-    <h2><span class="dot"></span>Solitaire Roadhouse</h2>
+    <h2 id="stop-5"><span class="dot"></span>Solitaire Roadhouse</h2>
     <p class="stop-meta">26.09.2026 (1 Ü, inkl. Frühstück)</p>
     <div class="stop">
       <table class="glance">
@@ -524,7 +578,7 @@
 
   <!-- 6. Walvis Bay -->
   <section>
-    <h2><span class="dot"></span>Walvis Bay – Kleines Nest B&B</h2>
+    <h2 id="stop-6"><span class="dot"></span>Walvis Bay – Kleines Nest B&B</h2>
     <p class="stop-meta">27.–28.09.2026 (2 Ü)</p>
     <div class="stop">
       <table class="glance">
@@ -585,7 +639,7 @@
 
   <!-- 7. Swakopmund -->
   <section>
-    <h2><span class="dot"></span>Swakopmund – Hotel A la Mer</h2>
+    <h2 id="stop-7"><span class="dot"></span>Swakopmund – Hotel A la Mer</h2>
     <p class="stop-meta">29.09.2026 (1 Ü, inkl. Frühstück)</p>
     <div class="stop">
       <table class="glance">
@@ -594,13 +648,26 @@
       </table>
       <h3>Aktivitäten</h3>
       <ul class="activities">
-        <li>Freie Zeit in Swakopmund</li>
+        <li>Stadtbummel zu Fuß (kompakte Route, ca. 2–2,5 km, spontan/flexibel):
+          <ol style="margin: 0.5rem 0 0; padding-left: 1.3rem;">
+            <li>Trendhaus – Kunsthandwerk, Deko, Teppiche</li>
+            <li>Die Muschel Book & Art Shop – Bücher, Kunst, kleines Café direkt dabei</li>
+            <li>Bojos Café – Mittagspause, gutes WLAN</li>
+            <li>Woermannhaus – historisches Wahrzeichen, Fotostopp</li>
+            <li>Swakopmund Open Craft Market – Souvenirs, Verhandeln gehört dazu</li>
+            <li>The Jetty – Sonnenuntergang direkt am Wasser</li>
+          </ol>
+        </li>
+        <li>Abendessen im The Tug (direkt im Anschluss an die Jetty)</li>
       </ul>
       <div class="notes-block">
         <h3>Praktische Hinweise</h3>
-        <p>Abendessen-Tipp The Tug (A. Schad Promenade/Molen Road, Jetty-Bereich) – Klassiker direkt
-        am Meer, gute Sunset-Lage, 2026 bestätigt geöffnet (Mo–Sa 17:00–22:00, So 12:00–22:00),
-        Reservierung empfohlen.</p>
+        <p>Die Route ist bewusst ohne feste Uhrzeiten geplant – nur der Tisch im The Tug sollte
+        vorab reserviert werden, der Rest bleibt spontan. Trendhaus hat eingeschränkte
+        Öffnungszeiten (Sa nur bis 13 Uhr, So geschlossen) – bei Ankunft an einem Sonntag diesen
+        Stopp einfach auslassen und direkt bei der Muschel/Bojos weitermachen.</p>
+        <p>The Tug (A. Schad Promenade/Molen Road, Jetty-Bereich): 2026 bestätigt geöffnet
+        Mo–Sa 17:00–22:00, So 12:00–22:00.</p>
       </div>
       <details class="private">
         <summary>Private Notizen</summary>
@@ -630,7 +697,7 @@
 
   <!-- 8. Terrace Bay -->
   <section>
-    <h2><span class="dot"></span>Terrace Bay Resort (Skeleton Coast)</h2>
+    <h2 id="stop-8"><span class="dot"></span>Terrace Bay Resort (Skeleton Coast)</h2>
     <p class="stop-meta">30.09.2026 (1 Ü)</p>
     <div class="stop">
       <table class="glance">
@@ -665,7 +732,7 @@
 
   <!-- 9. Khowarib Lodge -->
   <section>
-    <h2><span class="dot"></span>Khowarib Lodge</h2>
+    <h2 id="stop-9"><span class="dot"></span>Khowarib Lodge</h2>
     <p class="stop-meta">01.–03.10.2026 (3 Ü)</p>
     <div class="stop">
       <table class="glance">
@@ -703,7 +770,7 @@
 
   <!-- 10. Epupa Falls Lodge -->
   <section>
-    <h2><span class="dot"></span>Epupa Falls Lodge</h2>
+    <h2 id="stop-10"><span class="dot"></span>Epupa Falls Lodge</h2>
     <p class="stop-meta">04.–05.10.2026 (2 Ü, inkl. Halbpension)</p>
     <div class="stop">
       <table class="glance">
@@ -743,7 +810,7 @@
 
   <!-- 11. Okamanja Lodge -->
   <section>
-    <h2><span class="dot"></span>Okamanja Lodge</h2>
+    <h2 id="stop-11"><span class="dot"></span>Okamanja Lodge</h2>
     <p class="stop-meta">06.10.2026 (1 Ü, inkl. Frühstück)</p>
     <div class="stop">
       <table class="glance">
@@ -780,8 +847,8 @@
 
   <!-- 12. Eldorado Lodge -->
   <section>
-    <h2><span class="dot"></span>Eldorado Lodge (Etosha)</h2>
-    <p class="stop-meta">07.–09.10.2026 (3 Ü, inkl. Halbpension)</p>
+    <h2 id="stop-12"><span class="dot"></span>Eldorado Lodge (Etosha)</h2>
+    <p class="stop-meta">07–09.10.2026 (3 Ü, inkl. Halbpension)</p>
     <div class="stop" style="background-image: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.5)), url('images/IMG_4515.jpg'); background-size: cover; background-position: center; padding: 15px;">
       <table class="glance">
         <tr><th>Adresse</th><td>Farm Eldorado, ca. 8 km südlich des Anderson Gate, Ombika/Okaukuejo,
@@ -813,7 +880,7 @@
 
   <!-- 13. Windhoek – Bryan's View (Abreise) -->
   <section>
-    <h2><span class="dot"></span>Windhoek – Bryan's View (Abreise)</h2>
+    <h2 id="stop-13"><span class="dot"></span>Windhoek – Bryan's View (Abreise)</h2>
     <p class="stop-meta">10.10.2026 (1 Ü)</p>
     <div class="stop">
       <table class="glance">
@@ -843,7 +910,7 @@
   </footer>
 
 <h2>Kommentare</h2>
-<p>Hier könnt ihr während der Reise eure Gedanken dalassen:</p>
+<p>Hier könntet ihr während der Reise eure Gedanken dalassen:</p>
 
 <form name="kommentare" method="POST" data-netlify="true" netlify-honeypot="bot-field">
   <input type="hidden" name="form-name" value="kommentare" />
@@ -866,7 +933,5 @@
   <button type="submit">Absenden</button>
 </form>
 </div>
-</body> 
+</body>
 </html>
-
-
