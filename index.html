@@ -82,6 +82,28 @@
     margin-right: 0.4rem;
   }
 
+  .stop-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .stop-header h2 { flex: 1; }
+  .back-to-top {
+    flex-shrink: 0;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--header-blue);
+    background: var(--light-mint);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 0.25rem 0.65rem;
+    text-decoration: none;
+    white-space: nowrap;
+    margin-top: 0.05rem;
+  }
+  .back-to-top:hover { background: var(--badge-easy-bg); }
+
   h3 {
     font-size: 1rem;
     font-weight: 700;
@@ -303,7 +325,7 @@
       Wüstenelefanten und die Epupa-Wasserfälle.
     </p>
 
-    <div class="stations-list">
+    <div class="stations-list" id="stationen">
       <h3>Stationen</h3>
       <ol>
         <li><a href="#stop-1">Windhoek – Bryan's View (Anreise)</a></li>
@@ -349,7 +371,10 @@
 
   <!-- 1. Windhoek – Bryan's View (Anreise) -->
   <section>
+    <div class="stop-header">
     <h2 id="stop-1"><span class="dot"></span>Windhoek – Bryan's View (Anreise)</h2>
+    <a href="#stationen" class="back-to-top">↑ Übersicht</a>
+    </div>
     <p class="stop-meta">18.–19.09.2026 (1 Ü)</p>
     <div class="stop">
       <table class="glance">
@@ -392,7 +417,10 @@
 
   <!-- 2. Torgos Lodge -->
   <section>
+    <div class="stop-header">
     <h2 id="stop-2"><span class="dot"></span>Torgos Lodge (Kgalagadi) – Stone Chalet</h2>
+    <a href="#stationen" class="back-to-top">↑ Übersicht</a>
+    </div>
     <p class="stop-meta">19.–23.09.2026 (4 Ü)</p>
     <div class="stop">
       <table class="glance">
@@ -482,7 +510,10 @@
 
   <!-- 3. Gondwana Canyon Lodge -->
   <section>
+    <div class="stop-header">
     <h2 id="stop-3"><span class="dot"></span>Gondwana Canyon Lodge (Fish River Canyon)</h2>
+    <a href="#stationen" class="back-to-top">↑ Übersicht</a>
+    </div>
     <p class="stop-meta">23.–24.09.2026 (1 Ü)</p>
     <div class="stop">
       <table class="glance">
@@ -559,7 +590,10 @@
 
   <!-- 4. Lüderitz -->
   <section>
+    <div class="stop-header">
     <h2 id="stop-4"><span class="dot"></span>Lüderitz – Kairos Cottage B&B</h2>
+    <a href="#stationen" class="back-to-top">↑ Übersicht</a>
+    </div>
     <p class="stop-meta">24.–26.09.2026 (2 Ü, inkl. Frühstück)</p>
     <div class="stop">
       <table class="glance">
@@ -647,14 +681,19 @@
 
   <!-- 5. Solitaire -->
   <section>
+    <div class="stop-header">
     <h2 id="stop-5"><span class="dot"></span>Solitaire Roadhouse</h2>
+    <a href="#stationen" class="back-to-top">↑ Übersicht</a>
+    </div>
     <p class="stop-meta">26.–27.09.2026 (1 Ü, inkl. Frühstück)</p>
-    <div class="stop" style="background-image: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.5)), url('images/IMG_3237.jpg'); background-size: cover; background-position: center; padding: 15px;">
+    <div class="stop">
+      <div style="background-image: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.5)), url('images/IMG_3237.jpg'); background-size: cover; background-position: center; aspect-ratio: 1400 / 933; border-radius: 6px; padding: 10px 12px; margin: 0 0 0.8rem;">
       <table class="glance">
         <tr><th>Adresse</th><td>Solitaire Village, C14-Straße (Solitaire Farm Portion 2 Nr. 412),
         9000 Solitaire, Namibia</td></tr>
         <tr><th>Zeitraum</th><td>26.09.2026 – 27.09.2026</td></tr>
       </table>
+      </div>
       <h3>Aktivitäten</h3>
       <ul class="activities">
         <li>Moose McGregor's Desert Bakery – weltberühmt für ihren Apfelkuchen, Ritual unter
@@ -680,13 +719,15 @@
   </section>
 
   <!-- Etappe 5 -->
-  <div class="leg" style="background-image: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.5)), url('images/IMG_3260.jpg'); background-size: cover; background-position: center;">
+  <div class="leg">
+    <div style="background-image: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.5)), url('images/IMG_3260.jpg'); background-size: cover; background-position: center; aspect-ratio: 1400 / 933; border-radius: 6px; padding: 10px 12px; margin: 0 0 0.8rem;">
     <p class="leg-title">🛣️ Etappe: Solitaire → Walvis Bay</p>
     <table class="glance">
       <tr><th>Strecke</th><td>233 km</td></tr>
       <tr><th>Fahrzeit</th><td>3 Std.</td></tr>
     </table>
     <span class="leg-badge medium">Piste</span>
+    </div>
     <ul class="poi">
       <li><strong>Tropic of Capricorn-Schild</strong> (Wendekreis des Steinbocks) – Ort des
       Hintergrundbildes, guter Wiederholungs-Fotostopp</li>
@@ -707,7 +748,10 @@
 
   <!-- 6. Walvis Bay -->
   <section>
+    <div class="stop-header">
     <h2 id="stop-6"><span class="dot"></span>Walvis Bay – Kleines Nest B&B</h2>
+    <a href="#stationen" class="back-to-top">↑ Übersicht</a>
+    </div>
     <p class="stop-meta">27.–29.09.2026 (2 Ü)</p>
     <div class="stop">
       <table class="glance">
@@ -781,7 +825,10 @@
 
   <!-- 7. Swakopmund -->
   <section>
+    <div class="stop-header">
     <h2 id="stop-7"><span class="dot"></span>Swakopmund – Hotel A la Mer</h2>
+    <a href="#stationen" class="back-to-top">↑ Übersicht</a>
+    </div>
     <p class="stop-meta">29.–30.09.2026 (1 Ü, inkl. Frühstück)</p>
     <div class="stop">
       <table class="glance">
@@ -867,7 +914,10 @@
 
   <!-- 8. Terrace Bay -->
   <section>
+    <div class="stop-header">
     <h2 id="stop-8"><span class="dot"></span>Terrace Bay Resort (Skeleton Coast)</h2>
+    <a href="#stationen" class="back-to-top">↑ Übersicht</a>
+    </div>
     <p class="stop-meta">30.09.–01.10.2026 (1 Ü)</p>
     <div class="stop">
       <table class="glance">
@@ -935,7 +985,10 @@
 
   <!-- 9. Khowarib Lodge -->
   <section>
+    <div class="stop-header">
     <h2 id="stop-9"><span class="dot"></span>Khowarib Lodge</h2>
+    <a href="#stationen" class="back-to-top">↑ Übersicht</a>
+    </div>
     <p class="stop-meta">01.–04.10.2026 (3 Ü)</p>
     <div class="stop">
       <table class="glance">
@@ -998,7 +1051,10 @@
 
   <!-- 10. Epupa Falls Lodge -->
   <section>
+    <div class="stop-header">
     <h2 id="stop-10"><span class="dot"></span>Epupa Falls Lodge</h2>
+    <a href="#stationen" class="back-to-top">↑ Übersicht</a>
+    </div>
     <p class="stop-meta">04.–06.10.2026 (2 Ü, inkl. Halbpension)</p>
     <div class="stop">
       <table class="glance">
@@ -1053,7 +1109,10 @@
 
   <!-- 11. Okamanja Lodge -->
   <section>
+    <div class="stop-header">
     <h2 id="stop-11"><span class="dot"></span>Okamanja Lodge</h2>
+    <a href="#stationen" class="back-to-top">↑ Übersicht</a>
+    </div>
     <p class="stop-meta">06.–07.10.2026 (1 Ü, inkl. Frühstück)</p>
     <div class="stop">
       <table class="glance">
@@ -1101,7 +1160,10 @@
 
   <!-- 12. Eldorado Lodge -->
   <section>
+    <div class="stop-header">
     <h2 id="stop-12"><span class="dot"></span>Eldorado Lodge (Etosha)</h2>
+    <a href="#stationen" class="back-to-top">↑ Übersicht</a>
+    </div>
     <p class="stop-meta">07.–10.10.2026 (3 Ü, inkl. Halbpension)</p>
     <div class="stop" style="background-image: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.5)), url('images/IMG_4515.jpg'); background-size: cover; background-position: center; padding: 15px;">
       <table class="glance">
@@ -1134,7 +1196,10 @@
 
   <!-- 13. Windhoek – Bryan's View (Abreise) -->
   <section>
+    <div class="stop-header">
     <h2 id="stop-13"><span class="dot"></span>Windhoek – Bryan's View (Abreise)</h2>
+    <a href="#stationen" class="back-to-top">↑ Übersicht</a>
+    </div>
     <p class="stop-meta">10.–11.10.2026 (1 Ü)</p>
     <div class="stop">
       <table class="glance">
